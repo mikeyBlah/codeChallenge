@@ -43,7 +43,7 @@ const server = http.createServer((req, res) => {
         res.write(JSON.stringify({error: "Could not decode request: JSON parsing failed"}));
       } else {
         response = filterJson(JSON.parse(parsedBody));
-        res.statusCode = 302;
+        res.statusCode = 200;
         res.write(response);
       }
       res.end();
