@@ -1,4 +1,5 @@
 const http = require('http');
+let port = process.env.PORT || 8080;
 
 function filterJson(jsonObject) {
   const data = jsonObject.payload;
@@ -50,4 +51,4 @@ const server = http.createServer((req, res) => {
   }
 })
 
-server.listen(8080);
+server.listen(port);
